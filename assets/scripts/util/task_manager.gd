@@ -4,6 +4,8 @@ const MESSAGE = preload('res://source/origin/Message.tscn')
 onready var container = get_parent().get_node('Tabs/Install/Content')
 var download_in_progress := false
 var current_file : String = ''
+var MIGRATION_PROFILES = []
+var MIGRATE_FROM = 0
 
 
 func create_new_task():
@@ -22,10 +24,31 @@ func install_bubbleclient() -> void:
 	create_new_task()
 	manage_task('prompt', 'Alocate RAM', 'Choose at most 75% of your physical RAM', ['RAM', 'Continue'])
 	yield(container.get_child(0), 'on_continue_pressed')
-		
-	manage_task('spinner', 'Reading mod list')
+	
 	var file = File.new()
 	var dir = Directory.new()
+	
+	create_new_task()
+	manage_task('prompt', 'Choose where to migrate from', 'Or leave it empty', ['Migrate', 'Continue'])
+	if file.open(Root.MINECRAFT + '/launcher_profiles.json', File.READ) == OK:
+		var profiles = JSON.parse(file.get_as_text()).get_result()['profiles']
+		container.get_child(0).get_node('Container/OptionButton').add_item('Do not migrate')
+		for profile in profiles:
+			if 'gameDir' in profiles[profile]:
+				MIGRATION_PROFILES.append(profiles[profile]['gameDir'])
+			else:
+				MIGRATION_PROFILES.append(Root.MINECRAFT)
+			if 'name' in profiles[profile] and profiles[profile]['name'] != '':
+				container.get_child(0).get_node('Container/OptionButton').add_item(profiles[profile]['name'])
+			elif 'lastVersionId' in profiles[profile]:
+				container.get_child(0).get_node('Container/OptionButton').add_item(profiles[profile]['lastVersionId'].replace('-', ' ').capitalize())
+			else:
+				container.get_child(0).get_node('Container/OptionButton').add_item(profile)
+		file.close()
+	yield(container.get_child(0), 'on_continue_pressed')
+	MIGRATE_FROM = container.get_child(0).get_node('Container/OptionButton').get_selected_id()
+	print(MIGRATE_FROM)
+	manage_task('spinner', 'Reading mod list')
 	
 	file.open('user://response.json', File.READ)
 	var response = JSON.parse(file.get_as_text()).get_result()
@@ -36,9 +59,29 @@ func install_bubbleclient() -> void:
 	dir.make_dir_recursive(Root.BUBBLECLIENT + '/mods')
 	dir.make_dir_recursive(Root.BUBBLECLIENT + '/config')
 	
+	if MIGRATE_FROM != 0:
+		dir.copy(MIGRATION_PROFILES[MIGRATE_FROM] + '/servers.dat', Root.BUBBLECLIENT + '/servers.dat')
+		if dir.open(MIGRATION_PROFILES[MIGRATE_FROM] + '/resourcepacks') == OK:
+			dir.list_dir_begin()
+			var file_name = dir.get_next()
+			while file_name != "":
+				if dir.current_is_dir():
+					pass
+				else:
+					dir.copy(MIGRATION_PROFILES[MIGRATE_FROM] + '/resourcepacks/' + file_name, Root.BUBBLECLIENT + '/resourcepacks/' + file_name)
+				file_name = dir.get_next()
+	
 	if not file.file_exists(Root.BUBBLECLIENT + '/options.txt'):
 		file.open(Root.BUBBLECLIENT + '/options.txt', File.WRITE)
 		file.store_string('version:2730\nautoJump:false\nautoSuggestions:true\nchatColors:true\nchatLinks:true\nchatLinksPrompt:true\nenableVsync:false\nentityShadows:true\nforceUnicodeFont:false\ndiscrete_mouse_scroll:false\ninvertYMouse:false\nrealmsNotifications:true\nreducedDebugInfo:false\nsnooperEnabled:true\nshowSubtitles:false\ntouchscreen:false\nfullscreen:false\nbobView:true\ntoggleCrouch:false\ntoggleSprint:false\ndarkMojangStudiosBackground:false\nmouseSensitivity:0.352112676056338\nfov:0.5\nscreenEffectScale:0.0\nfovEffectScale:0.0\ngamma:12.0\nrenderDistance:6\nentityDistanceScaling:1.0\nguiScale:0\nparticles:0\nmaxFps:260\ndifficulty:2\ngraphicsMode:0\nao:2\nbiomeBlendRadius:2\nrenderClouds:false\nresourcePacks:[\"vanilla\",\"Fabric Mods\",\"cullleaves/smartleaves\"]\nincompatibleResourcePacks:[]\nlastServer:\nlang:en_us\nchatVisibility:0\nchatOpacity:1.0\nchatLineSpacing:0.0\ntextBackgroundOpacity:0.5\nbackgroundForChatOnly:true\nhideServerAddress:false\nadvancedItemTooltips:false\npauseOnLostFocus:true\noverrideWidth:0\noverrideHeight:0\nheldItemTooltips:true\nchatHeightFocused:1.0\nchatDelay:0.0\nchatHeightUnfocused:0.44366195797920227\nchatScale:1.0\nchatWidth:0.721830985915493\nmipmapLevels:0\nuseNativeTransport:true\nmainHand:right\nattackIndicator:1\nnarrator:0\ntutorialStep:movement\nmouseWheelSensitivity:1.0\nrawMouseInput:true\nglDebugVerbosity:1\nskipMultiplayerWarning:true\nhideMatchedNames:true\njoinedFirstServer:false\nhideBundleTutorial:false\nsyncChunkWrites:false\nkey_key.attack:key.mouse.left\nkey_key.use:key.mouse.right\nkey_key.forward:key.keyboard.w\nkey_key.left:key.keyboard.a\nkey_key.back:key.keyboard.s\nkey_key.right:key.keyboard.d\nkey_key.jump:key.keyboard.space\nkey_key.sneak:key.keyboard.left.shift\nkey_key.sprint:key.keyboard.left.control\nkey_key.drop:key.keyboard.q\nkey_key.inventory:key.keyboard.e\nkey_key.chat:key.keyboard.t\nkey_key.playerlist:key.keyboard.tab\nkey_key.pickItem:key.mouse.middle\nkey_key.command:key.keyboard.slash\nkey_key.socialInteractions:key.keyboard.p\nkey_key.screenshot:key.keyboard.f2\nkey_key.togglePerspective:key.keyboard.f5\nkey_key.smoothCamera:key.keyboard.unknown\nkey_key.fullscreen:key.keyboard.f11\nkey_key.spectatorOutlines:key.keyboard.unknown\nkey_key.swapOffhand:key.keyboard.f\nkey_key.saveToolbarActivator:key.keyboard.unknown\nkey_key.loadToolbarActivator:key.keyboard.x\nkey_key.advancements:key.keyboard.l\nkey_key.hotbar.1:key.keyboard.1\nkey_key.hotbar.2:key.keyboard.2\nkey_key.hotbar.3:key.keyboard.3\nkey_key.hotbar.4:key.keyboard.4\nkey_key.hotbar.5:key.keyboard.5\nkey_key.hotbar.6:key.keyboard.6\nkey_key.hotbar.7:key.keyboard.7\nkey_key.hotbar.8:key.keyboard.8\nkey_key.hotbar.9:key.keyboard.9\nkey_key.custom_hud.enable:key.keyboard.unknown\nkey_key.custom_hud.cycleProfiles:key.keyboard.unknown\nkey_key.custom_hud.swapToProfile1:key.keyboard.unknown\nkey_key.custom_hud.swapToProfile2:key.keyboard.unknown\nkey_key.custom_hud.swapToProfile3:key.keyboard.unknown\nkey_Toggle Debug Menu:key.keyboard.f3\nkey_Toggle Selected Scripts:key.keyboard.unknown\nkey_Stop Selected Scripts:key.keyboard.unknown\nkey_Accurate Reverse:key.keyboard.unknown\nkey_Accurate Into:key.keyboard.unknown\nkey_Open Essential Client Menu:key.keyboard.unknown\nkey_Open Chunk Debug:key.keyboard.f6\nkey_Open Client Script:key.keyboard.unknown\nkey_key.healthindicators.toggle:key.keyboard.keypad.divide\nkey_key.boosted-brightness.next:key.keyboard.b\nkey_key.boosted-brightness.raise:key.keyboard.right.bracket\nkey_key.boosted-brightness.lower:key.keyboard.left.bracket\nkey_key.boosted-brightness.select1:key.keyboard.unknown\nkey_key.boosted-brightness.select2:key.keyboard.unknown\nkey_key.boosted-brightness.select3:key.keyboard.unknown\nkey_key.boosted-brightness.select4:key.keyboard.unknown\nkey_key.boosted-brightness.select5:key.keyboard.unknown\nkey_key.inventoryhud.toggle:key.keyboard.i\nkey_key.inventoryhud.openconfig:key.keyboard.o\nkey_key.inventoryhud.togglepot:key.keyboard.unknown\nkey_key.inventoryhud.togglearm:key.keyboard.unknown\nkey_key.inventoryhud.toggleall:key.keyboard.unknown\nkey_key.okzoomer.zoom:key.keyboard.c\nkey_key.okzoomer.decrease_zoom:key.keyboard.unknown\nkey_key.okzoomer.increase_zoom:key.keyboard.unknown\nkey_key.okzoomer.reset_zoom:key.keyboard.unknown\nkey_Freelook:key.keyboard.y\nkey_key.replaymod.playeroverview:key.keyboard.b\nkey_key.replaymod.lighting:key.keyboard.z\nkey_key.replaymod.quickmode:key.keyboard.q\nkey_key.replaymod.settings:key.keyboard.unknown\nkey_key.replaymod.marker:key.keyboard.m\nkey_key.replaymod.thumbnail:key.keyboard.n\nkey_key.replaymod.playpause:key.keyboard.p\nkey_key.replaymod.rollclockwise:key.keyboard.l\nkey_key.replaymod.rollcounterclockwise:key.keyboard.j\nkey_key.replaymod.resettilt:key.keyboard.k\nkey_key.replaymod.pathpreview:key.keyboard.h\nkey_key.replaymod.keyframerepository:key.keyboard.x\nkey_key.replaymod.clearkeyframes:key.keyboard.c\nkey_key.replaymod.synctimeline:key.keyboard.v\nkey_key.replaymod.positionkeyframe:key.keyboard.i\nkey_key.replaymod.positiononlykeyframe:key.keyboard.unknown\nkey_key.replaymod.timekeyframe:key.keyboard.o\nkey_key.replaymod.bothkeyframes:key.keyboard.unknown\nkey_keybind.name.ESSENTIAL_FRIENDS:key.keyboard.h\nkey_keybind.name.COSMETIC_STUDIO:key.keyboard.b\nkey_keybind.name.COSMETICS_VISIBILITY_TOGGLE:key.keyboard.o\nkey_keybind.name.ADD_FRIEND:key.keyboard.unknown\nkey_keybind.name.CHAT_PEEK:key.keyboard.z\nkey_keybind.name.INVITE_FRIENDS:key.keyboard.unknown\nkey_keybind.name.ZOOM:key.keyboard.insert\nsoundCategory_master:0.5033113\nsoundCategory_music:0.0\nsoundCategory_record:1.0\nsoundCategory_weather:0.5070422\nsoundCategory_block:1.0\nsoundCategory_hostile:1.0\nsoundCategory_neutral:1.0\nsoundCategory_player:1.0\nsoundCategory_ambient:1.0\nsoundCategory_voice:1.0\nmodelPart_cape:true\nmodelPart_jacket:true\nmodelPart_left_sleeve:true\nmodelPart_right_sleeve:true\nmodelPart_left_pants_leg:true\nmodelPart_right_pants_leg:true\nmodelPart_hat:true')
+		file.close()
+	
+	if MIGRATE_FROM != 0:
+		file.open(MIGRATION_PROFILES[MIGRATE_FROM] + '/options.txt', File.READ)
+		var options = file.get_as_text()
+		file.close()
+		file.open(Root.BUBBLECLIENT + '/options.txt', File.WRITE)
+		file.store_string(options)
 		file.close()
 	
 	get_parent().get_node('Status').set_status('spinner', 'Installing the client', 'Do not close this app!')

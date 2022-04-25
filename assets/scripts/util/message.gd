@@ -13,6 +13,7 @@ func set_status(icon: String, label: String, description: String = '', prompt: A
 	$Container/Description.set_text(description)
 	
 	$Container/RAMPrompt.hide()
+	$Container/OptionButton.hide()
 	$ContinuePrompt.hide()
 	$DownloadPrompt.hide()
 	$ProgressBar.hide()
@@ -24,6 +25,8 @@ func set_status(icon: String, label: String, description: String = '', prompt: A
 		$DownloadPrompt.show()
 	if 'Progress' in prompt:
 		$ProgressBar.show()
+	if 'Migrate' in prompt:
+		$Container/OptionButton.show()
 
 
 func _on_ContinuePrompt_pressed() -> void:

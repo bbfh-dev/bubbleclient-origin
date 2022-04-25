@@ -4,7 +4,6 @@ extends VBoxContainer
 func _ready() -> void:
 	var file = File.new()
 	file.open('user://response.json', File.READ)
-	print(file.get_as_text())
 	$Tabs/Home/Content.set_bbcode(JSON.parse(file.get_as_text()).get_result()['home'])
 	$Tabs/About/Content.set_bbcode(JSON.parse(file.get_as_text()).get_result()['about'])
 	file.close()
@@ -17,6 +16,9 @@ func _ready() -> void:
 func check_whether_fabric_installed() -> bool:
 	var file = File.new()
 	if file.open(Root.MINECRAFT + '/launcher_profiles.json', File.READ) != OK:
+		return false
+	
+	if JSON.parse(file.get_as_text()).get_result() == null:
 		return false
 	
 	var launcher_profiles = JSON.parse(file.get_as_text()).get_result()

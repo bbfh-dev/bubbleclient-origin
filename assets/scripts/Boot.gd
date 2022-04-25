@@ -1,6 +1,7 @@
 extends Control
 
 const ORIGIN = preload('res://source/Origin.tscn')
+const VERSION = '1.0.0'
 
 
 func _ready() -> void:
@@ -22,6 +23,9 @@ func _on_HTTPRequest_request_completed(result: int, response_code: int, headers:
 		file.open('user://response.json', File.WRITE)
 		file.store_string(body.get_string_from_utf8())
 		file.close()
+		
+		if JSON.parse(body.get_string_from_utf8()).get_result()['version'] != VERSION:
+			OS.alert('Your client is outdated!\nYou still can use it though, but just remember\nIT IS O-U-T-D-A-T-E-D!!!!')
 		
 		$Panel/Label.set_text('Preparing to launch')
 		
