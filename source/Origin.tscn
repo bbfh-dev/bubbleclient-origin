@@ -1,0 +1,127 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/scripts/util/task_manager.gd" type="Script" id=1]
+[ext_resource path="res://assets/themes/Origin.tres" type="Theme" id=2]
+[ext_resource path="res://source/origin/Icon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/scripts/util/status.gd" type="Script" id=4]
+[ext_resource path="res://assets/scripts/Origin.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/Ubuntu-Light.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 3 )
+
+[node name="Origin" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_constants/separation = 8
+script = ExtResource( 8 )
+
+[node name="TaskManager" type="HTTPRequest" parent="."]
+use_threads = true
+script = ExtResource( 1 )
+
+[node name="FabricTimer" type="Timer" parent="TaskManager"]
+
+[node name="Tabs" type="TabContainer" parent="."]
+margin_right = 752.0
+margin_bottom = 394.0
+rect_min_size = Vector2( 0, 394 )
+theme = ExtResource( 2 )
+
+[node name="Home" type="Control" parent="Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 35.0
+
+[node name="Content" type="RichTextLabel" parent="Tabs/Home"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[b]Please wait[/b]. This page is being loaded"
+text = "Please wait. This page is being loaded"
+
+[node name="Install" type="Control" parent="Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 35.0
+
+[node name="Content" type="VBoxContainer" parent="Tabs/Install"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+custom_constants/separation = 8
+
+[node name="About" type="Control" parent="Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 35.0
+
+[node name="Content" type="RichTextLabel" parent="Tabs/About"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+theme = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[b]Please wait[/b]. This page is being loaded"
+text = "Please wait. This page is being loaded"
+
+[node name="Status" type="Panel" parent="."]
+margin_top = 402.0
+margin_right = 752.0
+margin_bottom = 434.0
+rect_min_size = Vector2( 0, 32 )
+theme = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Icon" parent="Status" instance=ExtResource( 3 )]
+
+[node name="Container" type="HBoxContainer" parent="Status"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Status/Container"]
+margin_top = 6.0
+margin_right = 191.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Loading BubbleClient 1.0.0"
+valign = 1
+
+[node name="Description" type="Label" parent="Status/Container"]
+margin_left = 199.0
+margin_top = 6.0
+margin_right = 279.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 0.392157 )
+custom_fonts/font = SubResource( 2 )
+text = "Please wait"
+valign = 1
+
+[connection signal="request_completed" from="TaskManager" to="TaskManager" method="_on_TaskManager_request_completed"]
+[connection signal="timeout" from="TaskManager/FabricTimer" to="." method="_on_FabricTimer_timeout"]
+[connection signal="meta_clicked" from="Tabs/Home/Content" to="." method="_on_Content_meta_clicked"]
+[connection signal="meta_clicked" from="Tabs/About/Content" to="." method="_on_Content_meta_clicked"]

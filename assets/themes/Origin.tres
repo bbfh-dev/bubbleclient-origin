@@ -1,0 +1,273 @@
+[gd_resource type="Theme" load_steps=32 format=2]
+
+[ext_resource path="res://assets/textures/icon/circle.svg" type="Texture" id=1]
+
+[sub_resource type="DynamicFontData" id=25]
+font_path = "res://assets/fonts/Ubuntu-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=23]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 25 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.901961, 0.901961, 0.901961, 0.0627451 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.345098, 0.913725, 0.192157, 0 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=27]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.152941, 0.862745, 0.2, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.345098, 0.913725, 0.192157, 0 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=28]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.482353, 0.945098, 0.270588, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.345098, 0.913725, 0.192157, 0 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=24]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 0.345098, 0.913725, 0.192157, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.345098, 0.913725, 0.192157, 0 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=29]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 6.0
+content_margin_bottom = 6.0
+bg_color = Color( 1, 1, 1, 0.25098 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.345098, 0.913725, 0.192157, 0 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=20]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=21]
+content_margin_top = 4.0
+content_margin_bottom = 4.0
+bg_color = Color( 1, 1, 1, 0.0627451 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.141176, 0.141176, 0.141176, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://assets/fonts/Ubuntu-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://assets/fonts/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://assets/fonts/Ubuntu-LightItalic.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://assets/fonts/UbuntuMono-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFontData" id=15]
+font_path = "res://assets/fonts/Ubuntu-Light.ttf"
+
+[sub_resource type="DynamicFont" id=16]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Ubuntu-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.141176, 0.141176, 0.141176, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 30.0
+content_margin_right = 26.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.141176, 0.141176, 0.141176, 0.12549 )
+border_width_left = 4
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 30.0
+content_margin_right = 26.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.141176, 0.141176, 0.141176, 1 )
+border_width_left = 4
+border_color = Color( 0.141176, 0.141176, 0.141176, 0 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 1, 1, 1, 0.392157 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 1, 1, 1, 0.490196 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=19]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color( 1, 1, 1, 0.0627451 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[resource]
+Button/colors/font_color = Color( 0.141176, 0.141176, 0.141176, 1 )
+Button/colors/font_color_disabled = Color( 1, 1, 1, 0.2 )
+Button/colors/font_color_focus = Color( 0.141176, 0.141176, 0.141176, 1 )
+Button/colors/font_color_hover = Color( 0.141176, 0.141176, 0.141176, 1 )
+Button/colors/font_color_pressed = Color( 0.141176, 0.141176, 0.141176, 1 )
+Button/fonts/font = SubResource( 23 )
+Button/styles/disabled = SubResource( 26 )
+Button/styles/focus = SubResource( 27 )
+Button/styles/hover = SubResource( 28 )
+Button/styles/normal = SubResource( 24 )
+Button/styles/pressed = SubResource( 29 )
+HSlider/icons/grabber = ExtResource( 1 )
+HSlider/icons/grabber_disabled = ExtResource( 1 )
+HSlider/icons/grabber_highlight = ExtResource( 1 )
+HSlider/styles/grabber_area = SubResource( 20 )
+HSlider/styles/grabber_area_highlight = SubResource( 20 )
+HSlider/styles/slider = SubResource( 21 )
+Panel/styles/panel = SubResource( 3 )
+ProgressBar/styles/bg = SubResource( 30 )
+ProgressBar/styles/fg = SubResource( 31 )
+RichTextLabel/colors/default_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+RichTextLabel/colors/font_color_selected = Color( 0.784314, 0.784314, 0.784314, 1 )
+RichTextLabel/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+RichTextLabel/colors/selection_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+RichTextLabel/fonts/bold_font = SubResource( 8 )
+RichTextLabel/fonts/bold_italics_font = SubResource( 10 )
+RichTextLabel/fonts/italics_font = SubResource( 12 )
+RichTextLabel/fonts/mono_font = SubResource( 14 )
+RichTextLabel/fonts/normal_font = SubResource( 16 )
+TabContainer/colors/font_color_bg = Color( 0.901961, 0.901961, 0.901961, 0.784314 )
+TabContainer/colors/font_color_disabled = Color( 0.901961, 0.901961, 0.901961, 0.2 )
+TabContainer/colors/font_color_fg = Color( 0.901961, 0.901961, 0.901961, 1 )
+TabContainer/constants/label_valign_bg = 0
+TabContainer/constants/label_valign_fg = 0
+TabContainer/constants/side_margin = 4
+TabContainer/constants/top_margin = 0
+TabContainer/fonts/font = SubResource( 2 )
+TabContainer/styles/panel = SubResource( 6 )
+TabContainer/styles/tab_bg = SubResource( 4 )
+TabContainer/styles/tab_fg = SubResource( 5 )
+VScrollBar/styles/grabber = SubResource( 17 )
+VScrollBar/styles/grabber_highlight = SubResource( 18 )
+VScrollBar/styles/grabber_pressed = SubResource( 18 )
+VScrollBar/styles/scroll = SubResource( 19 )

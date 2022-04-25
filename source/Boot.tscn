@@ -1,0 +1,655 @@
+[gd_scene load_steps=193 format=2]
+
+[ext_resource path="res://assets/textures/logo/frame14.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/RedHatDisplay-Black.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/scripts/Boot.gd" type="Script" id=3]
+[ext_resource path="res://assets/textures/icon/boot_spinner.svg" type="Texture" id=4]
+[ext_resource path="res://assets/scripts/util/spinning.gd" type="Script" id=5]
+[ext_resource path="res://assets/textures/logo/frame15.png" type="Texture" id=6]
+[ext_resource path="res://assets/textures/logo/frame16.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/logo/frame17.png" type="Texture" id=8]
+[ext_resource path="res://assets/textures/logo/frame18.png" type="Texture" id=9]
+[ext_resource path="res://assets/textures/logo/frame9.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/logo/frame1.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/logo/frame142.png" type="Texture" id=12]
+[ext_resource path="res://assets/textures/logo/frame101.png" type="Texture" id=13]
+[ext_resource path="res://assets/textures/logo/frame10.png" type="Texture" id=14]
+[ext_resource path="res://assets/textures/logo/frame2.png" type="Texture" id=15]
+[ext_resource path="res://assets/textures/logo/frame4.png" type="Texture" id=16]
+[ext_resource path="res://assets/textures/logo/frame3.png" type="Texture" id=17]
+[ext_resource path="res://assets/textures/logo/frame11.png" type="Texture" id=18]
+[ext_resource path="res://assets/textures/logo/frame13.png" type="Texture" id=19]
+[ext_resource path="res://assets/textures/logo/frame12.png" type="Texture" id=20]
+[ext_resource path="res://assets/textures/logo/frame5.png" type="Texture" id=21]
+[ext_resource path="res://assets/textures/logo/frame6.png" type="Texture" id=22]
+[ext_resource path="res://assets/textures/logo/frame8.png" type="Texture" id=23]
+[ext_resource path="res://assets/textures/logo/frame7.png" type="Texture" id=24]
+[ext_resource path="res://assets/textures/logo/frame21.png" type="Texture" id=25]
+[ext_resource path="res://assets/textures/logo/frame22.png" type="Texture" id=26]
+[ext_resource path="res://assets/textures/logo/frame23.png" type="Texture" id=27]
+[ext_resource path="res://assets/textures/logo/frame24.png" type="Texture" id=28]
+[ext_resource path="res://assets/textures/logo/frame25.png" type="Texture" id=29]
+[ext_resource path="res://assets/textures/logo/frame27.png" type="Texture" id=30]
+[ext_resource path="res://assets/textures/logo/frame26.png" type="Texture" id=31]
+[ext_resource path="res://assets/textures/logo/frame71.png" type="Texture" id=32]
+[ext_resource path="res://assets/textures/logo/frame72.png" type="Texture" id=33]
+[ext_resource path="res://assets/textures/logo/frame73.png" type="Texture" id=34]
+[ext_resource path="res://assets/textures/logo/frame74.png" type="Texture" id=35]
+[ext_resource path="res://assets/textures/logo/frame76.png" type="Texture" id=36]
+[ext_resource path="res://assets/textures/logo/frame75.png" type="Texture" id=37]
+[ext_resource path="res://assets/textures/logo/frame28.png" type="Texture" id=38]
+[ext_resource path="res://assets/textures/logo/frame19.png" type="Texture" id=39]
+[ext_resource path="res://assets/textures/logo/frame20.png" type="Texture" id=40]
+[ext_resource path="res://assets/textures/logo/frame29.png" type="Texture" id=41]
+[ext_resource path="res://assets/textures/logo/frame30.png" type="Texture" id=42]
+[ext_resource path="res://assets/textures/logo/frame31.png" type="Texture" id=43]
+[ext_resource path="res://assets/textures/logo/frame32.png" type="Texture" id=44]
+[ext_resource path="res://assets/textures/logo/frame33.png" type="Texture" id=45]
+[ext_resource path="res://assets/textures/logo/frame34.png" type="Texture" id=46]
+[ext_resource path="res://assets/textures/logo/frame35.png" type="Texture" id=47]
+[ext_resource path="res://assets/textures/logo/frame36.png" type="Texture" id=48]
+[ext_resource path="res://assets/textures/logo/frame37.png" type="Texture" id=49]
+[ext_resource path="res://assets/textures/logo/frame38.png" type="Texture" id=50]
+[ext_resource path="res://assets/textures/logo/frame39.png" type="Texture" id=51]
+[ext_resource path="res://assets/textures/logo/frame40.png" type="Texture" id=52]
+[ext_resource path="res://assets/textures/logo/frame41.png" type="Texture" id=53]
+[ext_resource path="res://assets/textures/logo/frame42.png" type="Texture" id=54]
+[ext_resource path="res://assets/textures/logo/frame43.png" type="Texture" id=55]
+[ext_resource path="res://assets/textures/logo/frame44.png" type="Texture" id=56]
+[ext_resource path="res://assets/textures/logo/frame45.png" type="Texture" id=57]
+[ext_resource path="res://assets/textures/logo/frame46.png" type="Texture" id=58]
+[ext_resource path="res://assets/textures/logo/frame47.png" type="Texture" id=59]
+[ext_resource path="res://assets/textures/logo/frame48.png" type="Texture" id=60]
+[ext_resource path="res://assets/textures/logo/frame49.png" type="Texture" id=61]
+[ext_resource path="res://assets/textures/logo/frame50.png" type="Texture" id=62]
+[ext_resource path="res://assets/textures/logo/frame51.png" type="Texture" id=63]
+[ext_resource path="res://assets/textures/logo/frame52.png" type="Texture" id=64]
+[ext_resource path="res://assets/textures/logo/frame54.png" type="Texture" id=65]
+[ext_resource path="res://assets/textures/logo/frame53.png" type="Texture" id=66]
+[ext_resource path="res://assets/textures/logo/frame55.png" type="Texture" id=67]
+[ext_resource path="res://assets/textures/logo/frame56.png" type="Texture" id=68]
+[ext_resource path="res://assets/textures/logo/frame57.png" type="Texture" id=69]
+[ext_resource path="res://assets/textures/logo/frame58.png" type="Texture" id=70]
+[ext_resource path="res://assets/textures/logo/frame59.png" type="Texture" id=71]
+[ext_resource path="res://assets/textures/logo/frame60.png" type="Texture" id=72]
+[ext_resource path="res://assets/textures/logo/frame61.png" type="Texture" id=73]
+[ext_resource path="res://assets/textures/logo/frame67.png" type="Texture" id=74]
+[ext_resource path="res://assets/textures/logo/frame69.png" type="Texture" id=75]
+[ext_resource path="res://assets/textures/logo/frame68.png" type="Texture" id=76]
+[ext_resource path="res://assets/textures/logo/frame77.png" type="Texture" id=77]
+[ext_resource path="res://assets/textures/logo/frame78.png" type="Texture" id=78]
+[ext_resource path="res://assets/textures/logo/frame80.png" type="Texture" id=79]
+[ext_resource path="res://assets/textures/logo/frame79.png" type="Texture" id=80]
+[ext_resource path="res://assets/textures/logo/frame70.png" type="Texture" id=81]
+[ext_resource path="res://assets/textures/logo/frame62.png" type="Texture" id=82]
+[ext_resource path="res://assets/textures/logo/frame63.png" type="Texture" id=83]
+[ext_resource path="res://assets/textures/logo/frame64.png" type="Texture" id=84]
+[ext_resource path="res://assets/textures/logo/frame65.png" type="Texture" id=85]
+[ext_resource path="res://assets/textures/logo/frame66.png" type="Texture" id=86]
+[ext_resource path="res://assets/textures/logo/frame81.png" type="Texture" id=87]
+[ext_resource path="res://assets/textures/logo/frame82.png" type="Texture" id=88]
+[ext_resource path="res://assets/textures/logo/frame83.png" type="Texture" id=89]
+[ext_resource path="res://assets/textures/logo/frame84.png" type="Texture" id=90]
+[ext_resource path="res://assets/textures/logo/frame85.png" type="Texture" id=91]
+[ext_resource path="res://assets/textures/logo/frame87.png" type="Texture" id=92]
+[ext_resource path="res://assets/textures/logo/frame86.png" type="Texture" id=93]
+[ext_resource path="res://assets/textures/logo/frame88.png" type="Texture" id=94]
+[ext_resource path="res://assets/textures/logo/frame89.png" type="Texture" id=95]
+[ext_resource path="res://assets/textures/logo/frame90.png" type="Texture" id=96]
+[ext_resource path="res://assets/textures/logo/frame91.png" type="Texture" id=97]
+[ext_resource path="res://assets/textures/logo/frame92.png" type="Texture" id=98]
+[ext_resource path="res://assets/textures/logo/frame93.png" type="Texture" id=99]
+[ext_resource path="res://assets/textures/logo/frame95.png" type="Texture" id=100]
+[ext_resource path="res://assets/textures/logo/frame94.png" type="Texture" id=101]
+[ext_resource path="res://assets/textures/logo/frame96.png" type="Texture" id=102]
+[ext_resource path="res://assets/textures/logo/frame97.png" type="Texture" id=103]
+[ext_resource path="res://assets/textures/logo/frame98.png" type="Texture" id=104]
+[ext_resource path="res://assets/textures/logo/frame99.png" type="Texture" id=105]
+[ext_resource path="res://assets/textures/logo/frame100.png" type="Texture" id=106]
+[ext_resource path="res://assets/textures/logo/frame102.png" type="Texture" id=107]
+[ext_resource path="res://assets/textures/logo/frame103.png" type="Texture" id=108]
+[ext_resource path="res://assets/textures/logo/frame104.png" type="Texture" id=109]
+[ext_resource path="res://assets/textures/logo/frame105.png" type="Texture" id=110]
+[ext_resource path="res://assets/textures/logo/frame106.png" type="Texture" id=111]
+[ext_resource path="res://assets/textures/logo/frame107.png" type="Texture" id=112]
+[ext_resource path="res://assets/textures/logo/frame109.png" type="Texture" id=113]
+[ext_resource path="res://assets/textures/logo/frame108.png" type="Texture" id=114]
+[ext_resource path="res://assets/textures/logo/frame110.png" type="Texture" id=115]
+[ext_resource path="res://assets/textures/logo/frame111.png" type="Texture" id=116]
+[ext_resource path="res://assets/textures/logo/frame112.png" type="Texture" id=117]
+[ext_resource path="res://assets/textures/logo/frame113.png" type="Texture" id=118]
+[ext_resource path="res://assets/textures/logo/frame114.png" type="Texture" id=119]
+[ext_resource path="res://assets/textures/logo/frame115.png" type="Texture" id=120]
+[ext_resource path="res://assets/textures/logo/frame116.png" type="Texture" id=121]
+[ext_resource path="res://assets/textures/logo/frame117.png" type="Texture" id=122]
+[ext_resource path="res://assets/textures/logo/frame118.png" type="Texture" id=123]
+[ext_resource path="res://assets/textures/logo/frame119.png" type="Texture" id=124]
+[ext_resource path="res://assets/textures/logo/frame120.png" type="Texture" id=125]
+[ext_resource path="res://assets/textures/logo/frame122.png" type="Texture" id=126]
+[ext_resource path="res://assets/textures/logo/frame121.png" type="Texture" id=127]
+[ext_resource path="res://assets/textures/logo/frame123.png" type="Texture" id=128]
+[ext_resource path="res://assets/textures/logo/frame132.png" type="Texture" id=129]
+[ext_resource path="res://assets/textures/logo/frame133.png" type="Texture" id=130]
+[ext_resource path="res://assets/textures/logo/frame134.png" type="Texture" id=131]
+[ext_resource path="res://assets/textures/logo/frame135.png" type="Texture" id=132]
+[ext_resource path="res://assets/textures/logo/frame137.png" type="Texture" id=133]
+[ext_resource path="res://assets/textures/logo/frame136.png" type="Texture" id=134]
+[ext_resource path="res://assets/textures/logo/frame138.png" type="Texture" id=135]
+[ext_resource path="res://assets/textures/logo/frame124.png" type="Texture" id=136]
+[ext_resource path="res://assets/textures/logo/frame125.png" type="Texture" id=137]
+[ext_resource path="res://assets/textures/logo/frame126.png" type="Texture" id=138]
+[ext_resource path="res://assets/textures/logo/frame127.png" type="Texture" id=139]
+[ext_resource path="res://assets/textures/logo/frame129.png" type="Texture" id=140]
+[ext_resource path="res://assets/textures/logo/frame128.png" type="Texture" id=141]
+[ext_resource path="res://assets/textures/logo/frame131.png" type="Texture" id=142]
+[ext_resource path="res://assets/textures/logo/frame130.png" type="Texture" id=143]
+[ext_resource path="res://assets/textures/logo/frame139.png" type="Texture" id=144]
+[ext_resource path="res://assets/textures/logo/frame140.png" type="Texture" id=145]
+[ext_resource path="res://assets/textures/logo/frame141.png" type="Texture" id=146]
+[ext_resource path="res://assets/textures/logo/frame143.png" type="Texture" id=147]
+[ext_resource path="res://assets/textures/logo/frame144.png" type="Texture" id=148]
+[ext_resource path="res://assets/textures/logo/frame145.png" type="Texture" id=149]
+[ext_resource path="res://assets/textures/logo/frame146.png" type="Texture" id=150]
+[ext_resource path="res://assets/textures/logo/frame154.png" type="Texture" id=151]
+[ext_resource path="res://assets/textures/logo/frame155.png" type="Texture" id=152]
+[ext_resource path="res://assets/textures/logo/frame156.png" type="Texture" id=153]
+[ext_resource path="res://assets/textures/logo/frame157.png" type="Texture" id=154]
+[ext_resource path="res://assets/textures/logo/frame158.png" type="Texture" id=155]
+[ext_resource path="res://assets/textures/logo/frame159.png" type="Texture" id=156]
+[ext_resource path="res://assets/textures/logo/frame160.png" type="Texture" id=157]
+[ext_resource path="res://assets/textures/logo/frame161.png" type="Texture" id=158]
+[ext_resource path="res://assets/textures/logo/frame148.png" type="Texture" id=159]
+[ext_resource path="res://assets/textures/logo/frame147.png" type="Texture" id=160]
+[ext_resource path="res://assets/textures/logo/frame149.png" type="Texture" id=161]
+[ext_resource path="res://assets/textures/logo/frame150.png" type="Texture" id=162]
+[ext_resource path="res://assets/textures/logo/frame151.png" type="Texture" id=163]
+[ext_resource path="res://assets/textures/logo/frame152.png" type="Texture" id=164]
+[ext_resource path="res://assets/textures/logo/frame153.png" type="Texture" id=165]
+[ext_resource path="res://assets/textures/logo/frame162.png" type="Texture" id=166]
+[ext_resource path="res://assets/textures/logo/frame163.png" type="Texture" id=167]
+[ext_resource path="res://assets/textures/logo/frame164.png" type="Texture" id=168]
+[ext_resource path="res://assets/textures/logo/frame165.png" type="Texture" id=169]
+[ext_resource path="res://assets/textures/logo/frame166.png" type="Texture" id=170]
+[ext_resource path="res://assets/textures/logo/frame167.png" type="Texture" id=171]
+[ext_resource path="res://assets/textures/logo/frame169.png" type="Texture" id=172]
+[ext_resource path="res://assets/textures/logo/frame168.png" type="Texture" id=173]
+[ext_resource path="res://assets/textures/logo/frame170.png" type="Texture" id=174]
+[ext_resource path="res://assets/textures/logo/frame171.png" type="Texture" id=175]
+[ext_resource path="res://assets/textures/logo/frame172.png" type="Texture" id=176]
+[ext_resource path="res://assets/textures/logo/frame173.png" type="Texture" id=177]
+[ext_resource path="res://assets/textures/logo/frame174.png" type="Texture" id=178]
+[ext_resource path="res://assets/textures/logo/frame175.png" type="Texture" id=179]
+[ext_resource path="res://assets/textures/logo/frame176.png" type="Texture" id=180]
+[ext_resource path="res://assets/textures/logo/frame177.png" type="Texture" id=181]
+[ext_resource path="res://assets/textures/logo/frame178.png" type="Texture" id=182]
+[ext_resource path="res://assets/textures/logo/frame179.png" type="Texture" id=183]
+[ext_resource path="res://assets/textures/logo/frame180.png" type="Texture" id=184]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 254, 96 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Logo:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Logo:rect_position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 254, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Logo:rect_position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 96, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Logo:rect_scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Logo:rect_scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Label:rect_position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( -177.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Label:rect_position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 161, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Label:modulate:r")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Label:modulate:g")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("Label:modulate:b")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Label:modulate:a")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("Logo:modulate:r")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("Logo:modulate:g")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("Logo:modulate:b")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("Logo:modulate:a")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Panel:rect_position:x")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 64, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("Panel:rect_position:y")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 384, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("Panel:modulate:r")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/19/type = "bezier"
+tracks/19/path = NodePath("Panel:modulate:g")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("Panel:modulate:b")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("Panel:modulate:a")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Panel:rect_size")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 640, 220 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "boot_up"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Logo:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 254, -0.25, 0, 0.75, 0, -2, -0.25, 0, 0.25, 0, -2, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Logo:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 96, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.5, 0, -104, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Logo:rect_scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.5, -0.75, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Logo:rect_scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0.5, -0.75, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Label:rect_position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( -177.5, -0.25, 0, 0.75, 0, 206.5, -0.25, 0, 0.25, 0, 206.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Label:rect_position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 161, -0.25, 0, 0.25, 0, 161, -0.25, 0, 0.5, 0, -55, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 1.5 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Label:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.5, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.5 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("Logo:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.5, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.5 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("Panel:rect_position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 384, -0.25, 0, 0.25, 0, 384, -0.25, 0, 0.25, 0, 128, -1, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Panel:modulate:a")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.5, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.5 )
+}
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 0.12549 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://assets/fonts/RedHatDisplay-Black.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 80
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.188235, 0.341176, 0.917647, 1 )
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 66 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 74 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 81 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 80 ), ExtResource( 79 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 93 ), ExtResource( 92 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 13 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 114 ), ExtResource( 113 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 126 ), ExtResource( 128 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ), ExtResource( 139 ), ExtResource( 141 ), ExtResource( 140 ), ExtResource( 143 ), ExtResource( 142 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 134 ), ExtResource( 133 ), ExtResource( 135 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 12 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 160 ), ExtResource( 159 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ), ExtResource( 164 ), ExtResource( 165 ), ExtResource( 151 ), ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 166 ), ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 173 ), ExtResource( 172 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ), ExtResource( 177 ), ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ), ExtResource( 184 ) ],
+"loop": true,
+"name": "loop",
+"speed": 30.0
+} ]
+
+[node name="Boot" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/boot_up = SubResource( 5 )
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 384.0
+margin_right = -64.0
+margin_bottom = 154.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="Control" type="TextureRect" parent="Panel"]
+modulate = Color( 0.901961, 0.901961, 0.901961, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -47.9998
+margin_right = 32.0
+margin_bottom = 16.0002
+rect_pivot_offset = Vector2( 32, 32 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -121.0
+margin_top = 21.0002
+margin_right = 121.0
+margin_bottom = 43.0002
+grow_horizontal = 2
+custom_colors/font_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Obtaining data from the server"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -561.5
+margin_top = -64.0
+margin_right = 49.5
+margin_bottom = 63.996
+custom_fonts/font = SubResource( 3 )
+text = "BubbleClient"
+valign = 1
+
+[node name="Logo" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.0
+margin_top = -129.0
+margin_right = 126.0
+margin_bottom = 127.0
+rect_pivot_offset = Vector2( 128, 128 )
+
+[node name="Panel" type="Panel" parent="Logo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2301.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Logo"]
+frames = SubResource( 1 )
+animation = "loop"
+frame = 28
+centered = false
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
